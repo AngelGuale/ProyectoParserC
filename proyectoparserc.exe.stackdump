@@ -1,0 +1,8 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=0040139A
+eax=61646174 ebx=0028AC5C ecx=80000038 edx=00000000 esi=00000000 edi=61007200
+ebp=0028ABE8 esp=0028A9D0 program=C:\Users\Roberto\Documents\GitHub\ProyectoParserC\dist\Debug\Cygwin_4.x-Windows\proyectoparserc.exe, pid 6564, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
+0028ABE8  0040139A (6172656E, 6E656D6C, 72206574, 73617475)
+End of stack trace
