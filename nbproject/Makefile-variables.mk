@@ -7,13 +7,13 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=GNU-Linux-x86
-CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=proyectoparser1
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/proyectoparser1
-CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=proyectoparser1.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/proyectoparser1.tar
+CND_PLATFORM_Debug=Cygwin_4.x-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_4.x-Windows
+CND_ARTIFACT_NAME_Debug=proyectoparserc
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/proyectoparserc
+CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_4.x-Windows/package
+CND_PACKAGE_NAME_Debug=proyectoparserc.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_4.x-Windows/package/proyectoparserc.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86

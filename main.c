@@ -7,41 +7,50 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <windows.h>
 
 /*
+ * prueba1.txt
  * 
  */
-int main(int argc, char** argv) {
-
-  
+int main(int argc, char** argv) { 
     FILE * fichero;
     printf("%s", "Ingrese el nombre del archivo: ");
     char* nombreArchivo=malloc(sizeof(char*));
     char buffer[500];
+    char c;
     gets(nombreArchivo);
     fichero= fopen (nombreArchivo,"r");
-    printf("%s", nombreArchivo);
+    printf("%s\n", nombreArchivo);
+    fseek(fichero, 0, SEEK_END); // seek to end of file
+    int size = ftell(fichero); // get current file pointer
+    fseek(fichero, 0, SEEK_SET); // seek back to beginning of file
+    printf("%d",size);
     int totalPalabras=0;
+    int i=0;
     if (fichero==NULL){
         return 0;
-    }else{
-        while(fgets(buffer, 300, fichero)!=NULL){
-        
+    }else{        
+        while(!feof(fichero)){
+            fscanf(fichero,"%[^'\0']",buffer);       
             printf("%s",buffer );
-           char* ptr=buffer;
-           while(ptr!='\0'){
-               if(ptr==" "){
-                   printf("%s", "ESPACIO");
-               }else{
-                   printf("%s %s","Este es ptr: \n", ptr );
-               }
-               ptr++;
-           }
         }
-    
-    
+            char* ptr=buffer;          
+            while(ptr[i] && i<500){
+                c= ptr[i];
+                i++;
+                if(isspace(c)){
+                    printf("%s", "ESPACIO");
+                    totalPalabras++;
+                }else{
+                    printf("\nEste es ptr:\n%s\n", ptr );
+                }
+
+           }
+         
     }
-    return (EXIT_SUCCESS);
+    printf("%d",totalPalabras);
+    system("PAUSE");      
 }
-
-
